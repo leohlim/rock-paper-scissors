@@ -20,6 +20,11 @@ h1 {
 button {
     height: 100px;
     width: 100px;
+    border-radius: 12px;
+}
+
+button:hover {
+    background-color: orange;
 }
 
 .sign {
@@ -31,6 +36,9 @@ button {
     justify-content: center;
     gap: 30px;
     margin-top: 50px;
+    font-size: 30px;
+    padding: 20px;
+    background-color: lightblue;
 }
 
 .scorebox {
@@ -43,7 +51,7 @@ button {
 #result {
     margin-top: 50px;
     text-align: center;
-    font-size: 100px;
+    font-size: 50px;
 }
 
 #restartBtn {

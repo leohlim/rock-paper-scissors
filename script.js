@@ -1,27 +1,21 @@
 const weapons = document.querySelectorAll("div.weapons button");
+weapons.forEach(button => button.addEventListener("click", getPlayerChoice))
+
 let playerScore = 0;
 let computerScore = 0;
+
 document.getElementById('restartBtn').style.visibility = 'hidden';
-const element = document.getElementById("myBtn");
-
-
-weapons.forEach(button => { button.addEventListener("click", getPlayerChoice)})
 
 
 
 function playRound(playerSelection) {
-    // Function that takes a user's input, compares it against the computer selection,
-    // then determines whether the player or the computer won. 
+    /* Function that takes the player's input, compares it against the computer selection,
+    then determines whether the player or the computer won. */
     
-
     let computerSelection = getComputerChoice();   
-
-
-    let result;        
+    let result = "";        
     let wonRound = "NICE BRO. You won this round!!";    
     let lostRound = "FUCK. you lost this round...";
-    console.log("Player chose" + playerSelection)
-    console.log("Computer chose" + computerSelection)
 
     // We compare the computer choice versus player choice!
 
@@ -60,6 +54,7 @@ function playRound(playerSelection) {
         }
     }
 
+    // Update UI depending on what the computer picked.
     let computerSign = "";
 
     if (computerSelection === "Rock") {
@@ -70,6 +65,7 @@ function playRound(playerSelection) {
         computerSign = "✌️";
     }
 
+    // Decide who won the game
     if (playerScore === 5 ) {
         result = "... and you won! FUCK YEA";
         disableGame();
@@ -78,7 +74,7 @@ function playRound(playerSelection) {
         disableGame();
     }
     
-    
+    // Update UI for the result and score
     document.getElementById("result").innerHTML = result;
     document.getElementById("playerScore").innerHTML = playerScore;
     document.getElementById("computerScore").innerHTML = computerScore;
@@ -111,6 +107,7 @@ function getComputerChoice() {
 }
 
 function disableGame() {
+    // Disable the weapon buttons, display restart button.
     weapons.forEach(button => {
         button.disabled = true
     })
