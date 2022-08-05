@@ -3,6 +3,54 @@
 }
 
 h1 {
-    flex: 1;
+    text-align: center;
+}
+
+.tutorial-text {
+    text-align: center;
+}
+
+.weapons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    height: 100px;
+    width: 100px;
+}
+
+.sign {
+    font-size: 50px;
+}
+
+.scoreboard {
+    display:flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.scorebox {
+    display: flex;
+    font-weight: bold;
+    flex-flow: column;
+    align-items: center;
+}
+
+#result {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 100px;
+}
+
+#restartBtn {
+    height: 50px;
+}
+
+.restart {
+    margin-top: 50px;
     text-align: center;
 }

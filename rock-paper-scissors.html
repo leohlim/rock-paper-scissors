@@ -15,20 +15,29 @@
             <p>Choose your weapon. First to five wins.</p>
         </div>
         <div class="weapons">
-            <button id="rock">✊</button>
-            <button id="paper">🖐</button>
-            <button id="scissors">✌️</button>
+            <button id="rock" class="sign">✊</button>
+            <button id="paper" class="sign">🖐</button>
+            <button id="scissors" class="sign">✌️</button>
         </div>
         <div class="scoreboard">
-            Player: <div id="playerSign" class="sign">?</div>
-            Wins- <div id="playerScore" class="score">0</div>
-            Computer: <div id="computerSign" class="sign">?</div>
-            Wins- <div id="computerScore" class="score">0</div>
+            <div class="scorebox">
+                Player <div id="playerSign" class="sign">?</div>
+                Points <div id="playerScore" class="score">0</div>
+            </div>
+            <div class="scorebox">
+                Computer <div id="computerSign" class="sign">?</div>
+                Points <div id="computerScore" class="score">0</div>
+            </div>
+            
 
 
         </div>
 
         <div id="result"></div>
+
+        <div class="restart">
+            <button id="restartBtn" onClick="window.location.reload();">Play again?</button>
+        </div>
 
 
 

@@ -1,6 +1,8 @@
 const weapons = document.querySelectorAll("div.weapons button");
 let playerScore = 0;
 let computerScore = 0;
+document.getElementById('restartBtn').style.visibility = 'hidden';
+const element = document.getElementById("myBtn");
 
 
 weapons.forEach(button => { button.addEventListener("click", getPlayerChoice)})
@@ -112,55 +114,7 @@ function disableGame() {
     weapons.forEach(button => {
         button.disabled = true
     })
+
+    document.getElementById('restartBtn').style.visibility = 'visible';
+
 }
-
-/*function game() {
-    // Keep track of the game score. Report the loser and winner of each game
-
-    playerScore = 0;
-    computerScore = 0;
-
-    // Create a game that loops the playRound function five times 
-    for (let i = 0; i < 5; i++) {
-        let playerSelection = prompt("Choose your weapon!").toLowerCase();      // Prompt the player for a RPS choice.
-
-        // Ask again if user picks anything besides rock, paper or scissors
-        while (!(playerSelection === "rock" || playerSelection === "paper" || playerSelection === "scissors")) {           
-            alert("Please enter the rock, paper or scissors");
-            playerSelection = prompt("Choose your weapon!").toLowerCase();  
-        }
-
-
-        // Console log the player choice and the computer choice.
-        console.log("You chose: " + playerSelection);
-        console.log("Computer chose: " + computerSelection);
-
-        result = playRound(playerSelection,computerSelection);                  // Get the result from each round
-        if (result === "Won!") {                                                // Determine the winner of the round, and
-            playerScore += 1;                                                   // keep score each round.
-            console.log("You won a point!");
-        } else if (result === "Lost") {
-            computerScore += 1;
-            console.log("Computer won a point.");
-        } 
-
-        // Console log the round number, player score, and computer score.
-        console.log("Round " + (i + 1) + "\nPlayer score: " + playerScore + "\nComputer score: " + computerScore);
-    }
-
-    // Tabulate scores to determine the winner or a draw
-
-    if (playerScore > computerScore) {
-        console.log("Congrats, you won!")
-    } else if (playerScore < computerScore) {
-        console.log("Sorry, you lost...")
-    } else {
-        console.log("You drew! Thats worse than losing.")
-    }
-
-
-}*/
-
-
-
-         // Initialize the computer choice variable
