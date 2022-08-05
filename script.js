@@ -12,6 +12,7 @@ function playRound(playerSelection) {
     /* Function that takes the player's input, compares it against the computer selection,
     then determines whether the player or the computer won. */
     
+    
     let computerSelection = getComputerChoice();   
     let result = "";        
     let wonRound = "NICE BRO. You won this round!!";    
@@ -57,13 +58,8 @@ function playRound(playerSelection) {
     // Update UI depending on what the computer picked.
     let computerSign = "";
 
-    if (computerSelection === "Rock") {
-        computerSign = "✊";
-    } else if (computerSelection === "Paper") {
-        computerSign = "🖐";
-    } else {
-        computerSign = "✌️";
-    }
+
+
 
     // Decide who won the game
     if (playerScore === 5 ) {
@@ -78,7 +74,6 @@ function playRound(playerSelection) {
     document.getElementById("result").innerHTML = result;
     document.getElementById("playerScore").innerHTML = playerScore;
     document.getElementById("computerScore").innerHTML = computerScore;
-    document.getElementById("computerSign").innerHTML = computerSign;
 
 
     
@@ -102,7 +97,14 @@ function getComputerChoice() {
     computerSelection = computerSelection.toLowerCase();    // Lowercase the computer's choice for comparison later
 
 
-
+    if (computerSelection === "rock") {
+        computerSign = "✊";
+    } else if (computerSelection === "paper") {
+        computerSign = "🖐";
+    } else {
+        computerSign = "✌️";
+    }
+    document.getElementById("computerSign").innerHTML = computerSign;
     return computerSelection;
 }
 
